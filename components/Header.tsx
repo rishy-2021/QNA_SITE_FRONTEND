@@ -115,7 +115,7 @@ function Header(props) {
           </div> */}
           <div
             className=" flex cursor-pointer text-base w-full p-2 group hover:bg-slate-400 hover:bg-opacity-25  hover:text-black hover:rounded-md text-gray-500 font-medium"
-            onClick={() => router.push("/Stack/analytical")}
+            // onClick={() => router.push("/Stack/analytical")}
           >
             <h1 className="ml-2 mt-1 ">Analysis</h1>
           </div>

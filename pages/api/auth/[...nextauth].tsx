@@ -13,9 +13,12 @@ export default NextAuth({
   providers: [
     GoogleProvider({
       clientId:
-        "1080512323-7akro7qrabirog170lf13domktumo9cu.apps.googleusercontent.com",
+        // "1080512323-7akro7qrabirog170lf13domktumo9cu.apps.googleusercontent.com",
+        "1063600602873-fcslqgb2t6iqut98a39qputii87u5lmp.apps.googleusercontent.com",
 
-      clientSecret: "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",
+      clientSecret:
+        // "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"
+        "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",
       authorization: {
         params: {
           prompt: "consent",

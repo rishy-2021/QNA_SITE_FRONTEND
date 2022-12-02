@@ -3,8 +3,6 @@ import { getSession, useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 
 import ForuMe from "./Stack/ForuMe";
-import Login from "./Stack/login";
-// import Solar from "./Stack/Solar";
 
 const Home: NextPage = ({ user }) => {
   const { data: session, status } = useSession();

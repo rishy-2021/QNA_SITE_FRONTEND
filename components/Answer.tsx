@@ -5,7 +5,7 @@ import axios from "axios";
 interface AnswerProp {
   visi: Boolean;
 }
-function Answer({ visi, questions }: AnswerProp) {
+function Answer({ visi }: AnswerProp) {
   // // console.log(visi);
   // const [answers, setAllAnswers] = useState([]);
   // useEffect(function () {

@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import LoginPopUp from "../pages/PopUps/Stack/LoginPopUp";
 
 function Answernewpage({ ans, user }) {
-  const [data, setData] = useState([]);
   const [score, setScore] = useState(0);
   const [totalImpression, setTotalImpression] = useState(
     ans?.likes?.length - ans?.dislikes?.length
@@ -16,8 +15,6 @@ function Answernewpage({ ans, user }) {
   // console.log("score", score);
 
   const currentDate = new Date();
-  // const answerPd = new Date(answer.created_at);
-  // console.log(answers, qid);
 
   function getDifferenceInDays(date1, date2) {
     const diffInMs = Math.abs(date2 - date1);
@@ -39,11 +36,6 @@ function Answernewpage({ ans, user }) {
   // );
 
   const likePost = async (answer, user) => {
-    // if (answer.user.email !== user.email) {
-    //   setScore(score + 1);
-    //   console.log(score);
-    // }
-
     await axios
       .put(
         "http://localhost:3001/api/answer/like",

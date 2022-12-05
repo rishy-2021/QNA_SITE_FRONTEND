@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 // import path from "path";
 import React, { useEffect, useState } from "react";
+import ReactLoading from "react-loading";
 // import Contact from "../components/contact";
 import Header from "../../components/Header";
 import Question from "../../components/Question";
@@ -25,32 +26,19 @@ function ForuMe({ user }) {
   // const [disapr, setdisapr] = useState(false);
   const [appr, setappr] = useState(false);
 
-  const [Questions, setAllQuestions] = useState([]);
+  const [Questions, setAllQuestions] = useState();
 
-  // useEffect(
-  //   function () {
-  //     axios
-
-  //       .get("http://localhost:3001/api/question/allQuestions")
-  //       .then((response) => setAllQuestions(response.data.data))
-  //       .catch((error) => console.log(error));
-  //   },
-
-  //   []
-  // );
-
-  useEffect(function () {
-    const getQues = async () => {
-      await axios
-        .get("https://qna-site-server.onrender.com/api/question/allQuestions")
-        .then((response) => {
-          setAllQuestions(response.data.data);
-          console.log("Question Fetched");
-        })
-        .catch((error) => console.log(error));
-    };
-    getQues();
+  useEffect(() => {
+    axios
+      .get("https://qna-site-server.onrender.com/api/question/allQuestions")
+      .then((response) => {
+        setAllQuestions(response.data.data);
+        console.log("Question Fetched");
+      })
+      .catch((error) => console.log(error));
   }, []);
+
+  // console.log(Questions, "uiuiiui");
 
   useEffect(() => {
     axios
@@ -110,9 +98,24 @@ function ForuMe({ user }) {
 
       <main className="md:flex  lg:px-10 xl:px-32 2xl:px-28 md:px-14">
         <section className="text-gray-500 middle mt-16 gap-8 px-4 text-sm sm:px-16 md:px-8 md:w-[70%] xl:w-[79%]">
-          {Questions.map((questions, index) => (
-            <Question user={user} questions={questions} key={index} />
-          ))}
+          {!Questions && (
+            <div className="mt-24 ml-24">
+              <ReactLoading
+                type="spinningBubbles"
+                color="#0000FF"
+                height={165}
+                width={150}
+              />
+              <h1 className=" text-lg italic font-semibold">
+                loading data from server......
+              </h1>
+            </div>
+          )}
+
+          {Questions &&
+            Questions.map((questions, index) => (
+              <Question user={user} questions={questions} key={index} />
+            ))}
         </section>
         <section className="right hidden lg:block mt-16 lg:w-[36%] lg:px-8 xl:w-[26%]">
           <div>

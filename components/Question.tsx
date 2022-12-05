@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import ReactLoading from "react-loading";
 import Share from "react-native-share";
 import Image from "next/image";
 import {
@@ -94,6 +95,15 @@ function Question({ user, questions }) {
         console.log(err);
       });
   }
+
+  // {Questions && (
+  //   <ReactLoading
+  //     type="cubes"
+  //     color="#0000FF"
+  //     height={100}
+  //     width={50}
+  //   />
+  // )}
 
   return (
     <article className="mb-8  shadow-md rounded-md px-4 md:px-4 py-3 leading-relaxed">

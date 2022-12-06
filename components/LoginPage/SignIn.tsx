@@ -113,20 +113,17 @@ const SignInForm = () => {
             </a>
             <a
               // onClick={() => signIn("facebook")}
-              onClick={() => {
-                signIn();
-
-                // {
-                //   email,
-                //   // callbackUrl: "http://localhost:3000/",
-                // }
-              }}
+              onClick={() =>
+                alert("currently Google & Email verification is on service")
+              }
               className="flex item-center justify-center social shadow-md hover:-translate-y-1 ease duration-300 h-12 w-12 cursor-pointer  hover:text-white rounded-full"
             >
               <img src="/facebook.svg" alt="hhhh" />
             </a>
             <a
-              // onClick={() => signIn("twitter")}
+              onClick={() =>
+                alert("currently Google & Email verification is on service")
+              }
               className="flex item-center justify-center social shadow-md hover:-translate-y-1 ease duration-300 h-12 w-12 cursor-pointer  hover:text-white rounded-full"
             >
               <img src="/twitter.svg" alt="hhhh" />

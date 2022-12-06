@@ -101,30 +101,30 @@ function Header(props) {
           >
             <h1 className="ml-2 mt-1 ">Dashboard</h1>
           </div>
-          <div
+          {/* <div
             className=" flex cursor-pointer text-base w-full p-2 group hover:bg-slate-400 hover:bg-opacity-25  hover:text-black hover:rounded-md text-gray-500 font-medium"
             onClick={() => router.push("/Stack/Admin_Question")}
           >
             <h1 className="ml-2 mt-1 ">Admin Question</h1>
-          </div>
+          </div> */}
           {/* <div
             className=" flex cursor-pointer text-base w-full p-2 group hover:bg-slate-400 hover:bg-opacity-25  hover:text-black hover:rounded-md text-gray-500 font-medium"
             onClick={() => router.push("/Quiz/QuizHome")}
           >
             <h1 className="ml-2 mt-1 ">Quiz</h1>
           </div> */}
-          <div
+          {/* <div
             className=" flex cursor-pointer text-base w-full p-2 group hover:bg-slate-400 hover:bg-opacity-25  hover:text-black hover:rounded-md text-gray-500 font-medium"
             // onClick={() => router.push("/Stack/analytical")}
           >
             <h1 className="ml-2 mt-1 ">Analysis</h1>
-          </div>
-          <div
+          </div> */}
+          {/* <div
             className=" flex cursor-pointer text-base w-full p-2 group hover:bg-slate-400 hover:bg-opacity-25  hover:text-black hover:rounded-md text-gray-500 font-medium"
             onClick={() => router.push("/Stack/Report")}
           >
             <h1 className="ml-2 mt-1 ">Report</h1>
-          </div>
+          </div> */}
           <div className=" flex cursor-pointer text-base w-full p-2 group hover:bg-slate-400 hover:bg-opacity-25  hover:text-black hover:rounded-md text-gray-500 font-medium">
             <h1 className="ml-2 mt-1 " onClick={logout}>
               Logout

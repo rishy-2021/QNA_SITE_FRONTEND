@@ -29,13 +29,13 @@ export default NextAuth({
       // authorizationUrl:
       //   "https://accounts.google.com/o/oauth2/v2/auth?prompt=consent&access_type=offline&response_type=code",
     }),
-    FacebookProvider({
-      clientId: "986837982012299",
-      clientSecret: "25281d4fb20f192761816380a7980742",
+    // FacebookProvider({
+    //   clientId: "986837982012299",
+    //   clientSecret: "25281d4fb20f192761816380a7980742",
 
-      // authorizationUrl:
-      //   "https://www.facebook.com/v11.0/dialog/oauth?scope=email",
-    }),
+    //   // authorizationUrl:
+    //   //   "https://www.facebook.com/v11.0/dialog/oauth?scope=email",
+    // }),
     // TwitterProvider({
     //   // clientId: process.env.FACEBOOK_CLIENT_ID,
     //   // clientSecret: process.env.FACEBOOK_CLIENT_SECRET,

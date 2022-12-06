@@ -166,7 +166,7 @@ function ForuMe({ user }) {
                       height={50}
                     ></Image>
                   </li>
-                  <li className="text-xs text-blue-700">Rajan N</li>
+                  <li className="text-xs text-blue-700">Rishy Patel</li>
                 </ul>
                 <ul className="flex  justify-between items-center">
                   <li className="mr-1 text-gray-400 font-semibold">15.5k</li>
@@ -196,10 +196,10 @@ function ForuMe({ user }) {
                       height={50}
                     ></Image>
                   </li>
-                  <li className="text-xs text-blue-700">Rajan N</li>
+                  <li className="text-xs text-blue-700">krishna</li>
                 </ul>
                 <ul className="flex  justify-between items-center">
-                  <li className="mr-1 text-gray-400 font-semibold">15.5k</li>
+                  <li className="mr-1 text-gray-400 font-semibold">15k</li>
                   <li>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -226,10 +226,10 @@ function ForuMe({ user }) {
                       height={50}
                     ></Image>
                   </li>
-                  <li className="text-xs text-blue-700">Rajan N</li>
+                  <li className="text-xs text-blue-700">anmol</li>
                 </ul>
                 <ul className="flex  justify-between items-center">
-                  <li className="mr-1 text-gray-400 font-semibold">15.5k</li>
+                  <li className="mr-1 text-gray-400 font-semibold">12.8k</li>
                   <li>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -256,10 +256,10 @@ function ForuMe({ user }) {
                       height={50}
                     ></Image>
                   </li>
-                  <li className="text-xs text-blue-700">Rajan N</li>
+                  <li className="text-xs text-blue-700">adarsh</li>
                 </ul>
                 <ul className="flex  justify-between items-center">
-                  <li className="mr-1 text-gray-400 font-semibold">15.5k</li>
+                  <li className="mr-1 text-gray-400 font-semibold">10.5k</li>
                   <li>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -290,7 +290,7 @@ function ForuMe({ user }) {
                   <li className="text-xs text-blue-700">Rajan N</li>
                 </ul>
                 <ul className="flex  justify-between items-center">
-                  <li className="mr-1 text-gray-400 font-semibold">15.5k</li>
+                  <li className="mr-1 text-gray-400 font-semibold">9.5k</li>
                   <li>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -317,10 +317,10 @@ function ForuMe({ user }) {
                       height={50}
                     ></Image>
                   </li>
-                  <li className="text-xs text-blue-700">Rajan N</li>
+                  <li className="text-xs text-blue-700">prince</li>
                 </ul>
                 <ul className="flex  justify-between items-center">
-                  <li className="mr-1 text-gray-400 font-semibold">15.5k</li>
+                  <li className="mr-1 text-gray-400 font-semibold">6.9k</li>
                   <li>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -344,12 +344,12 @@ function ForuMe({ user }) {
                   <li className="w-[30px] mr-2">
                     <Image
                       className="rounded-full"
-                      src="/profile1.jpg"
+                      src={user?.image}
                       width={50}
                       height={50}
                     ></Image>
                   </li>
-                  <li className="text-sm text-blue-700 mr-2">You</li>
+                  <li className="text-sm text-blue-700 mr-2">{user?.name}</li>
                   <li className="text-sm text-gray-400">(330)</li>
                 </ul>
                 <ul className="flex  justify-between items-center">

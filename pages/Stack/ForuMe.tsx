@@ -161,12 +161,12 @@ function ForuMe({ user }) {
                   <li className="w-[24px] mr-2">
                     <Image
                       className="rounded-full"
-                      src="/profile1.jpg"
+                      src="/p3.png"
                       width={50}
                       height={50}
                     ></Image>
                   </li>
-                  <li className="text-xs text-blue-700">Rishy Patel</li>
+                  <li className="text-xs text-blue-700">rishy</li>
                 </ul>
                 <ul className="flex  justify-between items-center">
                   <li className="mr-1 text-gray-400 font-semibold">15.5k</li>
@@ -191,7 +191,7 @@ function ForuMe({ user }) {
                   <li className="w-[24px] mr-2">
                     <Image
                       className="rounded-full"
-                      src="/profile1.jpg"
+                      src="/p1.jpg"
                       width={50}
                       height={50}
                     ></Image>
@@ -221,7 +221,7 @@ function ForuMe({ user }) {
                   <li className="w-[24px] mr-2">
                     <Image
                       className="rounded-full"
-                      src="/profile1.jpg"
+                      src="/p5.jpg"
                       width={50}
                       height={50}
                     ></Image>
@@ -251,12 +251,12 @@ function ForuMe({ user }) {
                   <li className="w-[24px] mr-2">
                     <Image
                       className="rounded-full"
-                      src="/profile1.jpg"
+                      src="/p4.png"
                       width={50}
                       height={50}
                     ></Image>
                   </li>
-                  <li className="text-xs text-blue-700">adarsh</li>
+                  <li className="text-xs text-blue-700">sahil</li>
                 </ul>
                 <ul className="flex  justify-between items-center">
                   <li className="mr-1 text-gray-400 font-semibold">10.5k</li>
@@ -312,12 +312,12 @@ function ForuMe({ user }) {
                   <li className="w-[24px] mr-2">
                     <Image
                       className="rounded-full"
-                      src="/profile1.jpg"
+                      src="/p6.jpg"
                       width={50}
                       height={50}
                     ></Image>
                   </li>
-                  <li className="text-xs text-blue-700">prince</li>
+                  <li className="text-xs text-blue-700">abhishek</li>
                 </ul>
                 <ul className="flex  justify-between items-center">
                   <li className="mr-1 text-gray-400 font-semibold">6.9k</li>
@@ -350,10 +350,10 @@ function ForuMe({ user }) {
                     ></Image>
                   </li>
                   <li className="text-sm text-blue-700 mr-2">{user?.name}</li>
-                  <li className="text-sm text-gray-400">(330)</li>
+                  <li className="text-sm text-gray-400">(17)</li>
                 </ul>
                 <ul className="flex  justify-between items-center">
-                  <li className="mr-1">15.5k</li>
+                  <li className="mr-1">0</li>
                   <li>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

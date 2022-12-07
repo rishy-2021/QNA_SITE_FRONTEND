@@ -1,8 +1,7 @@
 // This approach is taken from https://github.com/vercel/next.js/tree/canary/examples/with-mongodb
 import { MongoClient } from "mongodb";
 
-const uri =
-  "mongodb+srv://Rishy:N4BUh4CS2FDveVin@cluster0.sxw1v.mongodb.net/Authentication?retryWrites=true&w=majority";
+const uri = process.env.DB;
 const options = {
   useUnifiedTopology: true,
   useNewUrlParser: true,

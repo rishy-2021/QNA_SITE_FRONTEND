@@ -15,9 +15,9 @@ import QuestionAsk from "../PopUps/Stack/QuestionAsk";
 function ForuMe({ user }) {
   const src =
     "https://res.cloudinary.com/dckyh6od6/video/upload/v1669828329/ritesh_purwar/2022-11-30-22-25-05_Trim_Trim_xadilq.mp4";
-  // axios.defaults.withCredentials = true;
-  const server = process.env.SERVER_URL;
-  console.log(server);
+  axios.defaults.withCredentials = true;
+
+  console.log();
 
   const router = useRouter();
 
@@ -77,8 +77,6 @@ function ForuMe({ user }) {
   //     .then((response) => console.log(response))
   //     .catch((error) => console.log(error));
   // };
-
-  // console.log(userCoins);
 
   return (
     <div className="relative h-screen">
@@ -153,7 +151,7 @@ function ForuMe({ user }) {
               Sorry, your browser doesn't support embedded videos.
             </video>
           </div>
-          <div className="shadow-lg w-full text-gray-400 shadow-gray-600 rounded-xl mt-10 px-4 pt-4">
+          <div className="shadow-lg w-full text-gray-400 shadow-gray-600 rounded-xl mt-10 px-4 pt-4 pb-3">
             <p className="font-semibold text-gray-700">Top Users</p>
             <div className="">
               <article className="flex text-xs justify-between items-center mt-3">
@@ -307,7 +305,7 @@ function ForuMe({ user }) {
                   </li>
                 </ul>
               </article>
-              <article className="flex text-xs justify-between items-center mt-3">
+              <article className="flex text-xs justify-between items-center mt-3 ">
                 <ul className="flex justify-between items-center">
                   <li className="w-[24px] mr-2">
                     <Image
@@ -338,39 +336,41 @@ function ForuMe({ user }) {
                 </ul>
               </article>
             </div>
-            <div className="you">
-              <article className="flex text-xs justify-between items-center my-6 py-4 border-t-[1px] border-gray-300">
-                <ul className="flex justify-between items-center">
-                  <li className="w-[30px] mr-2">
-                    <Image
-                      className="rounded-full"
-                      src={user?.image}
-                      width={50}
-                      height={50}
-                    ></Image>
-                  </li>
-                  <li className="text-sm text-blue-700 mr-2">{user?.name}</li>
-                  <li className="text-sm text-gray-400">(17)</li>
-                </ul>
-                <ul className="flex  justify-between items-center">
-                  <li className="mr-1">0</li>
-                  <li>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-3 w-3 text-blue-500"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M3.293 9.707a1 1 0 010-1.414l6-6a1 1 0 011.414 0l6 6a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L4.707 9.707a1 1 0 01-1.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </li>
-                </ul>
-              </article>
-            </div>
+            {user && (
+              <div className="you">
+                <article className="flex text-xs justify-between items-center my-6 py-4 border-t-[1px] border-gray-300">
+                  <ul className="flex justify-between items-center">
+                    <li className="w-[30px] mr-2">
+                      <Image
+                        className="rounded-full"
+                        src={user?.image}
+                        width={50}
+                        height={50}
+                      ></Image>
+                    </li>
+                    <li className="text-sm text-blue-700 mr-2">{user?.name}</li>
+                    <li className="text-sm text-gray-400">(17)</li>
+                  </ul>
+                  <ul className="flex  justify-between items-center">
+                    <li className="mr-1">0</li>
+                    <li>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-3 w-3 text-blue-500"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M3.293 9.707a1 1 0 010-1.414l6-6a1 1 0 011.414 0l6 6a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L4.707 9.707a1 1 0 01-1.414 0z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </li>
+                  </ul>
+                </article>
+              </div>
+            )}
           </div>
         </section>
       </main>

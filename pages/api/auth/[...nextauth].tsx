@@ -1,8 +1,7 @@
 import NextAuth from "next-auth";
 import nodemailer from "nodemailer";
 import GoogleProvider from "next-auth/providers/google";
-import FacebookProvider from "next-auth/providers/facebook";
-// import TwitterProvider from "next-auth/providers/twitter";
+
 import EmailProvider from "next-auth/providers/email";
 // import { text } from "stream/consumers";
 
@@ -12,13 +11,10 @@ import clientPromise from "./lib/mongoClient";
 export default NextAuth({
   providers: [
     GoogleProvider({
-      clientId:
-        // "1080512323-7akro7qrabirog170lf13domktumo9cu.apps.googleusercontent.com",
-        "1063600602873-fcslqgb2t6iqut98a39qputii87u5lmp.apps.googleusercontent.com",
+      clientId: process.env.GOOGLE_CLIENT || "",
 
-      clientSecret:
-        // "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"
-        "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",
+      clientSecret: process.env.GOOGLE_SECRET || "",
+
       authorization: {
         params: {
           prompt: "consent",
@@ -26,37 +22,11 @@ export default NextAuth({
           response_type: "code",
         },
       },
-      // authorizationUrl:
-      //   "https://accounts.google.com/o/oauth2/v2/auth?prompt=consent&access_type=offline&response_type=code",
     }),
-    // FacebookProvider({
-    //   clientId: "986837982012299",
-    //   clientSecret: "25281d4fb20f192761816380a7980742",
 
-    //   // authorizationUrl:
-    //   //   "https://www.facebook.com/v11.0/dialog/oauth?scope=email",
-    // }),
-    // TwitterProvider({
-    //   // clientId: process.env.FACEBOOK_CLIENT_ID,
-    //   // clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
-    // }),
-
-    // EMAIL_SERVER=smtp://username:password@smtp.example.com:587
-    // EMAIL_FROM=noreply@example.com
     EmailProvider({
-      // server: {
-      //   host: "smtp.gmail.com",
-      //   port: 587,
-      //   auth: {
-      //     user: "rishypatel08@gmail.com",
-      //     pass: "vyyaygwmzrblutij",
-      //   },
-      // },
-      // from: "rishypatel08@gmail.com:vyyaygwmzrblutij@s",
-
-      server:
-        "smtp://rishypatel08@gmail.com:vyyaygwmzrblutij@smtp.gmail.com:587",
-      from: "rishypatel08@gmail.com",
+      server: process.env.EMAIL_SERVER,
+      from: process.env.EMAIL,
 
       async sendVerificationRequest({
         identifier: email,

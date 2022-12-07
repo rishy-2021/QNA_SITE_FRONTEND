@@ -15,9 +15,7 @@ import QuestionAsk from "../PopUps/Stack/QuestionAsk";
 function ForuMe({ user }) {
   const src =
     "https://res.cloudinary.com/dckyh6od6/video/upload/v1669828329/ritesh_purwar/2022-11-30-22-25-05_Trim_Trim_xadilq.mp4";
-  axios.defaults.withCredentials = true;
-
-  console.log();
+  // axios.defaults.withCredentials = true;
 
   const router = useRouter();
 
@@ -279,7 +277,7 @@ function ForuMe({ user }) {
                   <li className="w-[24px] mr-2">
                     <Image
                       className="rounded-full"
-                      src="/profile1.jpg"
+                      src="/prorile2.jpg"
                       width={50}
                       height={50}
                     ></Image>

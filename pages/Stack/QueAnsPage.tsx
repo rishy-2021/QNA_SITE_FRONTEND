@@ -23,7 +23,9 @@ function QueAnsPage({ user }) {
 
   useEffect(function () {
     axios
-      .post("http://localhost:3001/api/question/sq", { qid: question_id })
+      .post("https://qna-site-server.onrender.com/api/question/sq", {
+        qid: question_id,
+      })
       .then((response) => setQuestion(response.data.data))
       .catch((error) => console.log(error));
   }, []);

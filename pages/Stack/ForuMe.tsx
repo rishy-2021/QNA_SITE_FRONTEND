@@ -16,6 +16,7 @@ function ForuMe({ user }) {
   const src =
     "https://res.cloudinary.com/dckyh6od6/video/upload/v1669828329/ritesh_purwar/2022-11-30-22-25-05_Trim_Trim_xadilq.mp4";
   // axios.defaults.withCredentials = true;
+  // it's a video url
 
   const router = useRouter();
 
